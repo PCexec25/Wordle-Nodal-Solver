@@ -10,9 +10,6 @@ Unlike brute-force or purely frequency-based solvers, this approach:
 ---
 
 ## Features
-- **Simulation Mode**  
-  Runs the solver against all known Wordle solutions (or a random sample). Tracks average number of guesses and worst-case performance.
-
 - **Nodal Analysis Scoring**  
   Words are scored using:  
   - Letter frequency by position  
@@ -20,7 +17,6 @@ Unlike brute-force or purely frequency-based solvers, this approach:
   - Penalties for repeated letters to encourage diversity early on  
 
 - **Customizable Strategy**  
-  - Configurable opening word (e.g., `sauce`, `crane`, `soare`)  
   - Optional exploratory probe words when too few letters are known  
   - Easy to extend with entropy-style scoring  
 
@@ -59,7 +55,7 @@ On the official Wordle solution set (~2,143 words):
 ## Files
 
 - [**wordle_solver.py**](https://github.com/PCexec25/Wordle-Nodal-Solver/blob/main/wordle_solver.py) – Main solver implementation  
-- [**wordle_solutions.txt**](https://github.com/PCexec25/Wordle-Nodal-Solver/blob/main/wordle_solutions.txt) – Canonical list of Wordle solutions (must be provided separately)  
+- [**wordle_solutions_cached.txt**](https://github.com/PCexec25/Wordle-Nodal-Solver/blob/main/wordle_solutions_cached.txt) – Canonical list of Wordle solutions (must be provided separately)  
 - [**README.md**](https://github.com/PCexec25/Wordle-Nodal-Solver/blob/main/README.md) – This file  
 
 ---
