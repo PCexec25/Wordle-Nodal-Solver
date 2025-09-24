@@ -5,7 +5,6 @@ This repository contains a **Python implementation of a Wordle solver** that use
 Unlike brute-force or purely frequency-based solvers, this approach:
 - Models how letters are likely to appear together  
 - Balances **information gain** (broad coverage early) with **solution targeting** (narrowing once constraints are known)  
-- Supports testing different **starting words** to measure their impact on solving efficiency  
 
 ---
 
@@ -67,6 +66,11 @@ This project demonstrates:
 - **Data analysis**: measuring performance across large simulation sets to guide improvements
 
 I use this project on my résumé as an example of applying analytical and coding skills to a playful but non-trivial problem.  
+
+---
+
+## Known Bugs
+It is still possible for the Solver to fail due to NYT using a word that did not appear in Wordle's original solutions list of 2,315 5-letter words. It is known that since purchasing Wordle in 2022, NYT has only used 26 words outside of the original list (as of Sep 24, 2025). Given the rarity of this issue, the Solver's nodal parameters have not been updated to consider ALL possible 5 letter words, as this could prove to have a negative effect on answer analysis. Users may resolve this potential issue by providing their own wordle_solutions_cached.txt file with more potential 5 letter words. Currently if the Solver encounters an unlisted word, it will eventually determine that there are ZERO potential solutions and recommend "ZONAL" as your next guess.
 
 ---
 
